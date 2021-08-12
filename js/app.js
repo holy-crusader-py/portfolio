@@ -51,7 +51,6 @@ const data = {
 const urlParams = new URLSearchParams(window.location.search)
 
 const tag = urlParams.get('tag')
-console.log(tag)
 let project = []
 
 for (item in data.projects) {
@@ -63,7 +62,19 @@ for (item in data.projects) {
 project = JSON.stringify(project)
 project = JSON.parse(project)
 
-console.log(project)
+
+fetch("https://raw.githubusercontent.com/holy-tanuki/holy-tanuki/main/README.md")
+.then(data => data.text())
+.then(function(mdText) {
+    const md = new Remarkable();
+    md.set({
+        html: true
+    });
+
+    const readme = md.render(mdText)
+    console.log(readme)
+    $('#readme').append(readme)
+})
 
 const App = {
     data() {

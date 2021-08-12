@@ -9,23 +9,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet"> 
     <script src="https://unpkg.com/vue@next"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Holy Tanuki</title>
 </head>
 <body>
     <div id="main">
-        <section id="projects">
-            <div v-for="p in projects" class="project">
-                <h3 class="title">
-                    <a v-if="p.page" :href="'./projects/' + p.page" class="underline-link">{{ p.title }}</a>
-                    <a v-else href="">{{ p.title }}</a>
-                </h3>
-                <div class="tags">
-                    <a v-for="tag in p.tags" class="tag" :href="currentLocation + '?tag=' + tag">
-                        <span class="tag-name">{{ tag }}</span>
+        <header>
+
+        </header>
+        <section id="profile">
+            <div class="section-container">
+                <div class="left-container">
+                    <img class="profile-pic" src="https://avatars.githubusercontent.com/holy-tanuki?size=200" alt="profile">
+                    <a href="https://github.com/holy-tanuki" class="underline-link">
+                        <h1>Holy Tanuki</h1>
                     </a>
                 </div>
-                <p class="description">{{ p.description }}</p>
+                <div class="right-container">
+                    <a href="https://github.com/holy-tanuki/holy-tanuki/blob/main/README.md" class="underline-link">
+                        <span class="readme-link">holy-tanuki/README.md</span>
+                    </a>
+                    <div id="readme">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="section-container">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div v-for="p in projects" class="project">
+                        <h3 class="title">
+                            <a v-if="p.page" :href="'./projects/' + p.page" class="underline-link">{{ p.title }}</a>
+                            <a v-else href="">{{ p.title }}</a>
+                        </h3>
+                        <div class="tags">
+                            <a v-for="tag in p.tags" class="tag" :href="currentLocation + '?tag=' + tag">
+                                <span class="tag-name">{{ tag }}</span>
+                            </a>
+                        </div>
+                        <p class="description">{{ p.description }}</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
