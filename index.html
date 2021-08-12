@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
-    <script src="js/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="https://unpkg.com/vue@next"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
     <title>Holy Tanuki</title>
 </head>
 <body>
-    
+    <div id="main">
+        <section id="projects">
+            <div v-for="p in projects" class="project">
+                <h3 class="title">
+                    <a href="" class="underline-link">{{ p.title }}</a>
+                </h3>
+                <div class="tags">
+                    <a v-for="tag in p.tags" class="tag" :href="'index.html?tag=' + tag">
+                        <span class="tag-name">{{ tag }}</span>
+                    </a>
+                </div>
+                <p class="description">{{ p.description }}</p>
+            </div>
+        </section>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
