@@ -17,10 +17,11 @@
         <section id="projects">
             <div v-for="p in projects" class="project">
                 <h3 class="title">
-                    <a href="" class="underline-link">{{ p.title }}</a>
+                    <a v-if="p.page" :href="'./projects/' + p.page" class="underline-link">{{ p.title }}</a>
+                    <a v-else href="">{{ p.title }}</a>
                 </h3>
                 <div class="tags">
-                    <a v-for="tag in p.tags" class="tag" :href="'index.html?tag=' + tag">
+                    <a v-for="tag in p.tags" class="tag" :href="currentLocation + '?tag=' + tag">
                         <span class="tag-name">{{ tag }}</span>
                     </a>
                 </div>

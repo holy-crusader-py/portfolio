@@ -4,6 +4,7 @@ const data = {
             "title": "Mochi",
             "description": "Discord codded in python with a Dashboard.",
             "tags": ["mochi", "discord"],
+            "page": "mochi.html",
             "multi-project": true,
             "sub-projects": {
                 "Mochi DiscordBot": {
@@ -68,7 +69,8 @@ const App = {
     data() {
         return {
             projects: project,
-            tag: urlParams.get('tag')
+            tag: urlParams.get('tag'),
+            currentLocation: window.location
         }
     }
 }
