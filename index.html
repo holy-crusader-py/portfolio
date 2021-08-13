@@ -24,6 +24,7 @@
                     <a href="#projects" class="menu-link">Projects</a>
                 </div>
                 <div class="header-rs">
+                    <a href="https://www.github.com/holy-tanuki/" class="invert"><img src="https://cdn.jsdelivr.net/npm/simple-icons@5.9.0/icons/github.svg" alt="discord"></a>
                     <a href="https://discord.gg/yuCmafTjzW" class="invert"><img src="https://cdn.jsdelivr.net/npm/simple-icons@5.9.0/icons/discord.svg" alt="discord"></a>
                     <a href="https://www.instagram.com/holydeusoftanukis/" class="invert"><img src="https://cdn.jsdelivr.net/npm/simple-icons@5.9.0/icons/instagram.svg" alt="discord"></a>
                 </div>
@@ -53,15 +54,22 @@
                 <h2>Projects</h2>
                 <div class="projects-container">
                     <div v-for="p in projects" class="project">
-                        <h3 class="title">
-                            <a v-if="p.page" :href="'./projects/' + p.page" class="underline-link">{{ p.title }}</a>
-                            <a v-else href="">{{ p.title }}</a>
-                        </h3>
+                        <div class="project-header">
+                            <h3 class="title">
+                                <a v-if="p.link" :href="p.link" class="underline-link">{{ p.title }}</a>
+                                <a v-else-if="p.github" :href="p.github" class="underline-link">{{ p.title }}</a>
+                                <a v-else href="">{{ p.title }}</a>
+                            </h3>
+                            <div v-if="p.github" class="github-link">
+                                <a :href="p.github">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@5.9.0/icons/github.svg" alt="github">
+                                </a>
+                            </div>
+                        </div>
                         <div class="tags">
-                            <a v-for="tag in p.tags" class="tag" :href="currentLocation + '?tag=' + tag">
+                            <a v-for="tag in p.tags" class="tag">
                                 <span class="tag-name">{{ tag }}</span>
                             </a>
-
                         </div>
                         <p class="description">{{ p.description }}</p>
                     </div>
@@ -70,7 +78,7 @@
         </section>
     </div>
     <footer>
-        <span>Made with <a class="underline-link" href="https://www.nordtheme.com">Nord palette </a> and ❤️.</span>
+        <span>Made with <a class="underline-link" href="https://www.nordtheme.com">Nord palette</a>, <a class="underline-link" href="https://v3.vuejs.org/">Vue.js</a> and ❤️.</span>
     </footer>
     <script src="js/app.js"></script>
 </body>
