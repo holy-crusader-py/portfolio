@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta cha    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,10 +39,11 @@
                     </a>
                 </div>
                 <div class="right-container">
-                    <a href="https://github.com/holy-tanuki/holy-tanuki/blob/main/README.md" class="underline-link">
-                        <span class="readme-link">holy-tanuki/README.md</span>
-                    </a>
-                    <div id="readme">
+                    <div class="readme-container">
+                        <a href="https://github.com/holy-tanuki/holy-tanuki/blob/main/README.md" class="underline-link">
+                            <span class="readme-link">holy-tanuki/README.md</span>
+                        </a>
+                        <div id="readme"></div>
                     </div>
                 </div>
             </div>
@@ -61,6 +61,7 @@
                             <a v-for="tag in p.tags" class="tag" :href="currentLocation + '?tag=' + tag">
                                 <span class="tag-name">{{ tag }}</span>
                             </a>
+
                         </div>
                         <p class="description">{{ p.description }}</p>
                     </div>
@@ -68,6 +69,9 @@
             </div>
         </section>
     </div>
+    <footer>
+        <span>Made with <a class="underline-link" href="https://www.nordtheme.com">Nord palette </a> and ❤️.</span>
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>

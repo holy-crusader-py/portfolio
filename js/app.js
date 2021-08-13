@@ -72,7 +72,6 @@ fetch("https://raw.githubusercontent.com/holy-tanuki/holy-tanuki/main/README.md"
     });
 
     const readme = md.render(mdText)
-    console.log(readme)
     $('#readme').append(readme)
 })
 
