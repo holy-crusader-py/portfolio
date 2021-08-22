@@ -60,11 +60,6 @@
                                 <a v-else-if="p.github" :href="p.github" class="underline-link">{{ p.title }}</a>
                                 <a v-else href="">{{ p.title }}</a>
                             </h3>
-                            <div v-if="p.github" class="github-link">
-                                <a :href="p.github">
-                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@5.9.0/icons/github.svg" alt="github">
-                                </a>
-                            </div>
                         </div>
                         <div class="tags">
                             <a v-for="tag in p.tags" class="tag">
