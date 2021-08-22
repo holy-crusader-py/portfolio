@@ -4,14 +4,13 @@ const data = {
             "title": "Mochi DiscordBot",
             "description": "Mochi is an open source Discord bot developed in python.",
             "tags": ["mochi", "discord", "python"],
-            "github": "https://github.com/holy-tanuki/Mochi-DiscordBot"
+            "link": "https://z1269196b-z643fcf81-gtw.qovery.io/"
         },
         "mochi-dashboard": {
             "title": "Mochi Dashboard",
             "tags": ["mochi", "discord", "javascript"],
             "description": "Mochi dashboard is the open source dashboard for Mochi.",
-            "link": "https://z1269196b-z643fcf81-gtw.qovery.io/",
-            "github": "https://github.com/holy-tanuki/Mochi-Dashboard"
+            "link": "https://z1269196b-z643fcf81-gtw.qovery.io/"
         }
     }
 }
