@@ -64,6 +64,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto 0 0 0;
+    bottom: 0;
+}
+
+#main {
+    min-height: calc(100vh - 125px);
 }
 
 footer a {
@@ -229,6 +235,11 @@ section {
     width: 25px;
     height: 25px;
     filter: invert(13%) sepia(3%) saturate(5537%) hue-rotate(182deg) brightness(87%) contrast(78%);
+}
+
+#emoji {
+    cursor: pointer;
+    user-select: none;
 }
 
 @media only screen and (max-width: 800px) {
