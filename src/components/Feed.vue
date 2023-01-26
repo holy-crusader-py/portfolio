@@ -1,19 +1,5 @@
 <script setup>
 import Post from "./Post.vue"
-import Instafeed from "instafeed.js"
-
-// Get access token
-let url = `https://instagram.com/oauth/authorize/?client_id=${import.meta.env.INSTAGRAM_CLIENT_ID}&redirect_uri=http://localhost:5173/portfolio/&response_type=token`
-
-var feed = new Instafeed({
-    clientId: import.meta.env.INSTAGRAM_CLIENT_ID,
-    accessToken: "heyyy",
-    target: 'post-container',
-    template: '<Post title="{{user}}" />',
-    limit: 6,
-
-});
-
 </script>
 
 <template>
