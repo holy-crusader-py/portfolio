@@ -5,15 +5,17 @@ import Feed from './components/Feed.vue'
 
 <template>
   <div id="header">
-    <img
-      class="logo"
-      alt="Vue logo"
-      src="https://vuejs.org/images/logo.png"
-    />
+    <a href="/" class="logo-link">
+      <img
+        class="logo"
+        alt="Vue logo"
+        src="https://vuejs.org/images/logo.png"
+      />
+    </a>
     <div class="nav-bar">
-      <div class="nav-bar-item">Home</div>
-      <div class="nav-bar-item">About</div>
-      <div class="nav-bar-item">Contact</div>
+      <div class="nav-bar-item cursor-pointer">Home</div>
+      <div class="nav-bar-item cursor-pointer">About</div>
+      <div class="nav-bar-item cursor-pointer">Contact</div>
     </div>
   </div>
   <div id="page-content">
@@ -23,6 +25,12 @@ import Feed from './components/Feed.vue'
 </template>
 
 <style scoped>
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -44,7 +52,6 @@ import Feed from './components/Feed.vue'
 }
 
 .nav-bar-item {
-  cursor: pointer;
   font-size: 1.85rem;
   font-weight: 600;
   padding: 0 20px;
@@ -56,7 +63,7 @@ import Feed from './components/Feed.vue'
 }
 
 .nav-bar-item:hover {
-  background-color: rgb(143, 143, 143);
+  background-color: var(--color-tertiary);
 }
 
 </style>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="grid-hero">
         <div class="left">
-          <h1 class="title">Hello. <br />It's DiMA.</h1>
+          <h1 class="title">Hello. <br />It's Percy.</h1>
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">

@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "instafeed.js": "^2.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
