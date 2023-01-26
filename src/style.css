@@ -32,7 +32,7 @@ body, html {
   height: 100%;
   position: relative;
   color: var(--text-color);
-  cursor: url("src/assets/cursor/default1x.png") 6 6, auto;
+  cursor: url("/cursor/default1x.png") 6 6, auto;
 }
 
 h1,
@@ -82,5 +82,5 @@ div#page-content {
 }
 
 a, button, .cursor-pointer {
-  cursor: url("src/assets/cursor/pointer1x.png") 20 5, pointer;
+  cursor: url("/cursor/pointer1x.png") 20 5, pointer;
 }

@@ -7,7 +7,7 @@
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">
-          <img src="../assets/hero-logo.png" alt="DiMA" />
+          <img src="/hero-logo.png" alt="DiMA" />
         </div>
       </div>
     </div>
