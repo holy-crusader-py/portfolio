@@ -24,10 +24,20 @@
 }
 
 .grid-hero {
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 36px;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+@media screen and (max-width: 1000px) {
+  .left {
+    margin: auto auto;
+  }
+  .grid-hero {
+    flex-flow: column wrap;
+    justify-content: center;
+  }
 }
 
 .subtitle {

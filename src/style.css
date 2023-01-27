@@ -35,6 +35,13 @@ body, html {
   cursor: url("/cursor/default1x.png") 6 6, auto;
 }
 
+
+@media screen and (max-width: 850px) {
+  body, html {
+    padding: 5px 5px 0 5px;
+  }
+}
+
 h1,
 h2,
 h3,

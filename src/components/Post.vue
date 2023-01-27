@@ -45,4 +45,11 @@ defineProps({
   .post-hover:hover {
       opacity: 1;
   }
+
+  @media screen and (max-width: 850px) {
+      .post {
+          width: 100%;
+          height: 100%;
+      }
+    }
 </style>

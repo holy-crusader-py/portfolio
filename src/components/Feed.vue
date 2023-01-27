@@ -54,4 +54,16 @@ const showMore = () => {
         justify-content: center;
         align-items: center;
     }
+
+    @media screen and (max-width: 1250px) {
+        .post-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .post-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 </style>
