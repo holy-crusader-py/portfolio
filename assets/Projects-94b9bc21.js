@@ -1,0 +1,1 @@
+import{_ as s,c}from"./index-4582fd33.js";const e={},t=c('<div class="section"><div class="container"><h2 class="title">Projects</h2><h3 class="subtitle">Some project I have made.</h3></div></div><div class="section"></div>',2);function o(a,i){return t}const n=s(e,[["render",o]]);export{n as default};
