@@ -21,7 +21,7 @@ defineProps({
       object-fit: cover;
   }
   .post {
-      width: 330px; height: 330px;
+      width: 350px; height: 350px;
       border: solid 5px #000;
       box-shadow: 8px 8px 0px 0px #000;
       position: relative;

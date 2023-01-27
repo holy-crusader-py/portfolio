@@ -1,16 +1,28 @@
 <script setup>
+import { ref, computed } from 'vue'
 import Post from "./Post.vue"
+
+var posts = ref(6)
+var btnShowMore = ref(true)
+
+const showMore = () => {
+    posts.value = 14;
+    btnShowMore.value = false;
+}
+
 </script>
 
 <template>
   <div id="feed" class="section">
       <div class="container">
         <h1 class="title">Feed</h1>
-        <div class="post-container">
-            <Post v-for="i in 6" :image_url="'https://picsum.photos/1000?random=' + i" title="Sample" />
+        <div class="post-handler">
+            <div class="post-container">
+                <Post v-for="i in posts" :image_url="'https://picsum.photos/1000?random=' + i" title="Sample" />
+            </div>
         </div>
-        <div class="load-more">
-            <button class="btn">Load more</button>
+        <div v-if="btnShowMore" class="load-more">
+            <button @click="showMore" class="btn">Show more</button>
         </div>
     </div>
   </div>
@@ -23,15 +35,17 @@ import Post from "./Post.vue"
     .title {
         font-size: 4rem;
     }
-    .post-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        flex-grow: 1 0 33%;
-        row-gap: 70px;
-        justify-content: space-between;
+    .post-handler {
         width: 100%;
-        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 0;
+    }
+    .post-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 80px;
     }
 
     .load-more {

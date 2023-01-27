@@ -27,7 +27,7 @@
 
 body, html {
   background-color: var(--background-color);
-  padding: 15px 15px 0 15px;
+  padding: 10px 10px 0 10px;
   margin: 0;
   height: 100%;
   position: relative;
@@ -57,18 +57,28 @@ div#page-content {
   background-color: #fff;
   margin-bottom: -4px;
   width: 100%;
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh - 90px);
 }
 
 .section {
-  padding: 120px 0;
+  padding: 100px 0;
   border-top: solid 5px #000;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+h1.title {
+  font-size: 7rem;
+  line-height: 0.9;
+}
+
+h2.title {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .btn {
@@ -83,4 +93,9 @@ div#page-content {
 
 a, button, .cursor-pointer {
   cursor: url("/cursor/pointer1x.png") 20 5, pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
 }

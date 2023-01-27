@@ -3,7 +3,7 @@
     <div class="container">
       <div class="grid-hero">
         <div class="left">
-          <h1 class="title">Hello. <br />It's Percy.</h1>
+          <h1 class="title">Hey there. <br />I'm Percy.</h1>
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">
@@ -28,11 +28,6 @@
   grid-auto-flow: column;
   grid-gap: 36px;
   grid-template-columns: 1fr 1fr;
-}
-
-.title {
-  font-size: 7rem;
-  line-height: 0.9;
 }
 
 .subtitle {

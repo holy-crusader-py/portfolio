@@ -1,27 +1,29 @@
-<script setup>
-import Welcome from './components/Welcome.vue'
-import Feed from './components/Feed.vue'
-</script>
-
 <template>
   <div id="header">
-    <a href="/" class="logo-link">
+    <router-link class="logo-link" to="/">
       <img
         class="logo"
         alt="Vue logo"
         src="https://vuejs.org/images/logo.png"
       />
-    </a>
+    </router-link>
     <div class="nav-bar">
-      <div class="nav-bar-item cursor-pointer">Home</div>
-      <div class="nav-bar-item cursor-pointer">About</div>
-      <div class="nav-bar-item cursor-pointer">Contact</div>
+      <router-link to="/projects">
+        <div class="nav-bar-item cursor-pointer">Projects</div>
+      </router-link>
+      <router-link to="/about">
+        <div class="nav-bar-item cursor-pointer">About</div>
+      </router-link>
+      <router-link to="/contact">
+        <div class="nav-bar-item cursor-pointer">Contact</div>
+      </router-link>
     </div>
   </div>
-  <div id="page-content">
-    <Welcome></Welcome>
-    <Feed></Feed>
-  </div>
+  <main>
+    <div id="page-content">
+      <router-view />
+    </div>
+  </main>
 </template>
 
 <style scoped>
@@ -57,13 +59,19 @@ import Feed from './components/Feed.vue'
   padding: 0 20px;
   height: 100%;
   will-change: background-color;
-  transition: background-color 300ms;
+  transition: background-color 100ms;
   display: flex;
   align-items: center;
 }
 
-.nav-bar-item:hover {
-  background-color: var(--color-tertiary);
+a {
+  height: 100%;
 }
+
+.nav-bar-item:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 
 </style>
