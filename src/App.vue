@@ -1,4 +1,5 @@
 <template>
+  <div id="texture"></div>
   <div id="header">
     <router-link class="logo-link" to="/">
       <img
@@ -72,6 +73,5 @@ a {
   background-color: var(--color-primary);
   color: #fff;
 }
-
 
 </style>
