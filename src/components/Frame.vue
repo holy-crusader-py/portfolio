@@ -13,7 +13,10 @@ defineProps({
       </div>
       <h2 class="frame-title">{{ title }}</h2>
     </div>
-    <img class="frame-image" :src="image_url" />
+    <div class="frame-content">
+      <button class="frame-button">View Project</button>
+      <img class="frame-image" :src="image_url" />
+    </div>
   </div>
 </template>
 
@@ -29,6 +32,23 @@ defineProps({
       justify-content: left;
       gap: 10px;
       background-color: var(--secondary-color);
+      height: 40px;
+  }
+  .frame-content {
+      width: 100%; height: calc(100% - 40px);
+      position: relative;
+  }
+  .frame-button {
+      position: absolute;
+      bottom: 10px; right: 10px;
+      padding: 0 10px;
+      height: 50px;
+      border: solid 5px #000;
+      background-color: var(--secondary-color);
+      color: #000;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
   }
   .dots {
       display: flex;
@@ -55,6 +75,8 @@ defineProps({
       border: solid 5px #000;
       box-shadow: 8px 8px 0px 0px #000;
       overflow: hidden;
+      display: inline-block;
+      position: relative;
   }
 
   @media screen and (max-width: 850px) {
