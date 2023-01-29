@@ -48,7 +48,6 @@ defineProps({
       color: #000;
       font-size: 1rem;
       font-weight: 600;
-      cursor: pointer;
   }
   .dots {
       display: flex;
