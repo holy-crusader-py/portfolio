@@ -1,12 +1,12 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import Post from "./Post.vue"
 
-var posts = ref(6)
+var posts = ref(3)
 var btnShowMore = ref(true)
 
 const showMore = () => {
-    posts.value = 14;
+    posts.value = 8;
     btnShowMore.value = false;
 }
 
