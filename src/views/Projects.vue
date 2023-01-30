@@ -1,6 +1,38 @@
-<script setup>
+<script>
 import Frame from "../components/Frame.vue";
-import "/src/js/scrollHorz.js"
+
+
+export default {
+    components: {
+        Frame
+    },
+    methods: {
+        handleScroll(e) {
+            let t = $(".projects-scroller")[0];
+            var translateX;
+            if (t.style.transform) {
+                translateX = parseInt(t.style.transform.split("(")[1].split("px")[0]);
+            } else {
+                translateX = 0;
+            }
+            let b_translateX = translateX;
+            let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+            translateX += delta * 60;
+            if (translateX > 10) {
+                translateX = 0;
+            } else if (translateX < -t.scrollWidth + t.clientWidth) {
+                translateX = -t.scrollWidth + t.clientWidth;
+            }
+            t.style.transform = `translateX(${translateX}px)`;
+
+            if (translateX != b_translateX) {
+                e.preventDefault();
+            }
+        }
+    }
+}
+
 </script>
 
 
@@ -12,7 +44,7 @@ import "/src/js/scrollHorz.js"
         </div>
     </div>
     <div class="section">
-        <div class="container project-container">
+        <div @wheel="handleScroll" class="container project-container">
             <div class="projects-scroller">
                 <Frame v-for="i in 4" :image_url="'https://picsum.photos/740/440?random=' + i" title="Sample" />
             </div>
