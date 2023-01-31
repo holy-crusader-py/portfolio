@@ -5,9 +5,16 @@ import Post from "./Post.vue"
 var posts = ref(3)
 var btnShowMore = ref(true)
 
-const showMore = () => {
-    posts.value = 8;
-    btnShowMore.value = false;
+const toggleShowMoreFeed = () => {
+    if (btnShowMore.value == true) {
+        posts.value = 8;
+        btnShowMore.value = false;
+        $(".feed-button").text("Show less");
+    } else {
+        posts.value = 3;
+        btnShowMore.value = true;
+        $(".feed-button").text("Show more");
+    }
 }
 
 </script>
@@ -21,8 +28,8 @@ const showMore = () => {
                 <Post v-for="i in posts" :image_url="'https://picsum.photos/1000?random=' + i" title="Sample" />
             </div>
         </div>
-        <div v-if="btnShowMore" class="load-more">
-            <button @click="showMore" class="btn">Show more</button>
+        <div class="toggle-feed">
+            <button @click="toggleShowMoreFeed" class="btn feed-button">Show more</button>
         </div>
     </div>
   </div>
@@ -48,7 +55,7 @@ const showMore = () => {
         grid-gap: 80px;
     }
 
-    .load-more {
+    .toggle-feed {
         width: 100%;
         display: flex;
         justify-content: center;
