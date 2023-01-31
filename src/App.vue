@@ -57,7 +57,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100%; width: 75px;
 }
 .logo {
   width: 48px; height: 48px;
