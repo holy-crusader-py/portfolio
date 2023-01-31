@@ -19,7 +19,7 @@ export default {
 <template>
   <div id="texture"></div>
   <div id="header">
-    <router-link class="logo-link" to="/">
+    <router-link @click="toggleMenu" class="logo-link" to="/">
       <img
         class="logo"
         alt="Vue logo"
