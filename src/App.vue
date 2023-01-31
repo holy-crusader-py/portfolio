@@ -5,12 +5,10 @@ export default {
             let t = $(".nav-bar")[0];
             if (!$(t).hasClass("nav-bar-active")) {
               $(t).addClass("nav-bar-active");
-              // t.style.display = "flex";
-              // $(t).slideDown(400)
+              $("body").addClass("no-scroll");
             } else {
               $(t).removeClass("nav-bar-active");
-              // $(t).slideUp(400)
-              // t.style.display = "none";
+              $("body").removeClass("no-scroll");
             }
         }
     }
@@ -120,6 +118,7 @@ a {
   }
   .nav-bar-active {
     display: flex !important;
+    position: fixed !important;
   }
   a {
     display: flex;

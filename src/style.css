@@ -33,6 +33,12 @@ body, html {
   cursor: url("/cursor/default1x.png") 6 6, auto;
 }
 
+@media screen and (max-width: 560px) {
+  body.no-scroll {
+    overflow-Y: hidden;
+  }
+}
+
 h1,
 h2,
 h3,

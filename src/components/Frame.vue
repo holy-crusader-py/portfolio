@@ -70,7 +70,7 @@ defineProps({
   }
   .frame {
       width: 750px; height: 450px;
-      min-width: 750px; 
+      min-width: 750px;
       border: solid 5px #000;
       box-shadow: 8px 8px 0px 0px #000;
       overflow: hidden;
