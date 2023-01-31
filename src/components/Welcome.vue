@@ -7,7 +7,7 @@
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">
-          <img src="/hero-logo.png" alt="DiMA" />
+          <img class="hero-image" src="/hero-logo.png" alt="DiMA" />
         </div>
       </div>
     </div>
@@ -23,11 +23,21 @@
   text-align: center;
 }
 
+.hero-image {
+  max-width: 400px;
+  width: 100%;
+}
+
 .grid-hero {
   display: flex;
   width: 100%;
   justify-content: space-between;
-    flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -40,9 +50,13 @@
   }
 }
 
-.subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-top: 1rem;
+@media screen and (max-width: 560px) {
+  .title {
+    font-size: 4.5rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }
+
 </style>

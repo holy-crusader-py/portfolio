@@ -72,7 +72,7 @@ div#page-content {
   background-color: #fff;
   margin-bottom: -4px;
   width: 100%;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 70px);
 }
 
 .section {

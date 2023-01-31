@@ -1,3 +1,23 @@
+<script>
+export default {
+    methods: {
+        toggleMenu() {
+            let t = $(".nav-bar")[0];
+            if (!$(t).hasClass("nav-bar-active")) {
+              $(t).addClass("nav-bar-active");
+              // t.style.display = "flex";
+              // $(t).slideDown(400)
+            } else {
+              $(t).removeClass("nav-bar-active");
+              // $(t).slideUp(400)
+              // t.style.display = "none";
+            }
+        }
+    }
+}
+
+</script>
+
 <template>
   <div id="texture"></div>
   <div id="header">
@@ -8,14 +28,19 @@
         src="https://vuejs.org/images/logo.png"
       />
     </router-link>
+    <div @click="toggleMenu" class="burger-button cursor-pointer">
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+    </div>
     <div class="nav-bar">
-      <router-link to="/projects">
+      <router-link @click="toggleMenu" to="/projects">
         <div class="nav-bar-item cursor-pointer">Projects</div>
       </router-link>
-      <router-link to="/about">
+      <router-link @click="toggleMenu" to="/about">
         <div class="nav-bar-item cursor-pointer">About</div>
       </router-link>
-      <router-link to="/contact">
+      <router-link @click="toggleMenu" to="/contact">
         <div class="nav-bar-item cursor-pointer">Contact</div>
       </router-link>
     </div>
@@ -35,8 +60,7 @@
   height: 100%;
 }
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  width: 48px; height: 48px;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -69,9 +93,66 @@ a {
   height: 100%;
 }
 
+.burger-button {
+  display: none;
+}
+
 .nav-bar-item:hover {
   background-color: var(--color-primary);
   color: #fff;
+}
+
+@media screen and (max-width: 560px) {
+    #header {
+    flex-flow: column;
+    align-items: start;
+  }
+  .nav-bar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%; height: calc(100vh - 70px);
+    background-color: var(--secondary-color);
+    z-index: 1;
+    border-top: 5px solid var(--color-primary);
+  }
+  .nav-bar-active {
+    display: flex !important;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    height: 70px; width: 100%;
+  }
+  .nav-bar-item {
+    width: 100%;
+    justify-content: center;
+  }
+  .logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+  }
+  .burger-button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+    position: absolute;
+    top: 0; right: 0;
+    width: 75px; height: 70px;
+    transition: border-width 300ms;
+  }
+  .burger-line {
+    width: 48px;
+    height: 5px;
+    background-color: var(--color-primary);
+    margin: 5px 0;
+  }
 }
 
 </style>
