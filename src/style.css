@@ -55,7 +55,7 @@ a {
   opacity: 0.2;
   background-image: url("/texture.png");
   background-repeat: repeat;
-  background-size: 20%;
+  background-size: 450px;
   mix-blend-mode: screen;
   user-select: none;
   pointer-events: none;
