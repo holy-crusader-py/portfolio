@@ -72,4 +72,32 @@ export default {
 .section {
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 850px) {
+    .projects-scroller {
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+        justify-content: initial;
+        align-items: center;
+    }
+    .project-container {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (pointer:coarse) {
+    .projects-scroller {
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+        justify-content: initial;
+        align-items: center;
+    }
+    .project-container {
+        height: auto;
+        width: 100%;
+    }
+}
 </style>

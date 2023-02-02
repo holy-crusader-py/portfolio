@@ -79,9 +79,18 @@ defineProps({
   }
 
   @media screen and (max-width: 850px) {
-      .post {
+      .frame {
           width: 100%;
-          height: 100%;
+          min-width: initial;
+          max-width: 750px;
       }
     }
+
+  @media (pointer:coarse) {
+      .frame {
+          width: 100%;
+          min-width: initial;
+          max-width: 750px;
+      }
+  }
 </style>
