@@ -7,7 +7,7 @@
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">
-          <img class="hero-image" src="/hero-logo.png" alt="DiMA" />
+          <img class="hero-image" src="/CodsWorth.png" alt="DiMA" />
         </div>
       </div>
     </div>
@@ -24,8 +24,18 @@
 }
 
 .hero-image {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
+  animation: cods 3s ease-in-out infinite alternate;
+}
+
+@keyframes cods {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
 .grid-hero {
