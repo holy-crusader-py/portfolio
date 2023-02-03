@@ -42,8 +42,6 @@ export default {
             <h2 class="title">Projects</h2>
             <h3 class="subtitle">Some project I have made.</h3>
         </div>
-    </div>
-    <div class="section">
         <div @wheel="handleScroll" class="container project-container">
             <div class="projects-scroller">
                 <Frame v-for="i in 4" :image_url="'https://picsum.photos/740/440?random=' + i" title="Sample" />
