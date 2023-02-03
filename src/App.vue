@@ -1,9 +1,10 @@
 <script>
 export default {
     methods: {
-        toggleMenu() {
+        toggleMenu(show = null) {
             let t = $(".nav-bar")[0];
-            if (!$(t).hasClass("nav-bar-active")) {
+
+            if (show == true || !$(t).hasClass("nav-bar-active") && show != false) {
               $(t).addClass("nav-bar-active");
               $("body").addClass("no-scroll");
             } else {
@@ -19,7 +20,7 @@ export default {
 <template>
   <div id="texture"></div>
   <div id="header">
-    <router-link @click="toggleMenu" class="logo-link" to="/">
+    <router-link @click="toggleMenu(show=false)" class="logo-link" to="/">
       <img
         class="logo"
         alt="Vue logo"
@@ -32,13 +33,13 @@ export default {
       <div class="burger-line"></div>
     </div>
     <div class="nav-bar">
-      <router-link @click="toggleMenu" to="/projects">
+      <router-link @click="toggleMenu(show=false)" to="/projects">
         <div class="nav-bar-item cursor-pointer">Projects</div>
       </router-link>
-      <router-link @click="toggleMenu" to="/about">
+      <router-link @click="toggleMenu(show=false)" to="/about">
         <div class="nav-bar-item cursor-pointer">About</div>
       </router-link>
-      <router-link @click="toggleMenu" to="/contact">
+      <router-link @click="toggleMenu(show=false)" to="/contact">
         <div class="nav-bar-item cursor-pointer">Contact</div>
       </router-link>
     </div>
