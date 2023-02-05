@@ -20,5 +20,10 @@ export default createRouter({
       path: '/contact',
       component: () => import('./views/Contact.vue'),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('./views/NotFound.vue')
+    },
   ],
 })
