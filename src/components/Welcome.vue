@@ -24,18 +24,7 @@
 }
 
 .hero-image {
-  max-width: 500px;
-  width: 100%;
-  animation: cods 3s ease-in-out infinite alternate;
-}
-
-@keyframes cods {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
+  width: 400px;
 }
 
 .grid-hero {
