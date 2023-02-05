@@ -8,7 +8,7 @@
             <h3 class="subtitle">Want to talk to me ?</h3>
         </div>
         <div class="container">
-            <img src="MarmotFallout.png" alt="marmot fallout">
+            <img src="/MarmotFallout.png" alt="marmot fallout">
         </div>
     </div>
 </template>

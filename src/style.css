@@ -34,7 +34,7 @@ body, html {
 }
 
 body.no-scroll {
-  overflow-Y: hidden;
+  overflow-y: hidden;
 }
 
 h1,
