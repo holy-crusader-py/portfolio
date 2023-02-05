@@ -1,10 +1,12 @@
 <script>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 
 export default {
     components: {
-        Header
+        Header,
+        Footer
     },
     methods: {
         toggleMenu(show = null) {
@@ -25,12 +27,17 @@ export default {
 
 <template>
   <div id="texture"></div>
+
   <Header></Header>
+
   <main>
     <div id="page-content">
       <router-view />
     </div>
   </main>
+
+  <Footer></Footer>
+
 </template>
 
 <style scoped>
