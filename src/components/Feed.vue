@@ -8,6 +8,10 @@ library.add(faChevronLeft, faChevronRight)
 
 
 export default {
+    components: {
+        FontAwesomeIcon,
+        Post
+    },
     data() {
         return {
             postCount: 3,
@@ -36,12 +40,12 @@ export default {
                 $(".feed-button").text("Show more");
             }
         },
-        async getPosts() {
+        getPosts() {
             return this.posts.slice(0, this.postCount);
         },
         fullscreenPost(postId) {
             let post = this.posts.find(post => post.id == postId);
-            postFocus.value = post.image_url;
+            this.postFocus = post.image_url;
             $("body").addClass("no-scroll");
             $(".fullscreen-post").addClass("active");
         },
