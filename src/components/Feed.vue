@@ -1,53 +1,56 @@
-<script setup>
-import { ref } from 'vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import Post from "./Post.vue"
+<script>
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import Post from "./Post.vue";
 
 library.add(faChevronLeft, faChevronRight)
 
-var postCount = ref(3)
-var postList = ref([
-    {id: 1, image_url: "https://picsum.photos/1000/600?random=1", title: "Sample"},
-    {id: 2, image_url: "https://picsum.photos/1000?random=2", title: "Sample"},
-    {id: 3, image_url: "https://picsum.photos/1000?random=3", title: "Sample"},
-    {id: 4, image_url: "https://picsum.photos/1000?random=4", title: "Sample"},
-    {id: 5, image_url: "https://picsum.photos/1000?random=5", title: "Sample"},
-    {id: 6, image_url: "https://picsum.photos/1000?random=6", title: "Sample"},
-    {id: 7, image_url: "https://picsum.photos/1000?random=7", title: "Sample"},
-    {id: 8, image_url: "https://picsum.photos/1000?random=8", title: "Sample"},
-])
-var btnShowMore = ref(true)
-var postFocus = ref("")
 
-const toggleShowMoreFeed = () => {
-    if (btnShowMore.value == true) {
-        postCount.value = 8;
-        btnShowMore.value = false;
-        $(".feed-button").text("Show less");
-    } else {
-        postCount.value = 3;
-        btnShowMore.value = true;
-        $(".feed-button").text("Show more");
+export default {
+    data() {
+        return {
+            postCount: 3,
+            posts: [
+                {id: 1, image_url: "https://picsum.photos/1000/600?random=1", title: "Sample"},
+                {id: 2, image_url: "https://picsum.photos/1000?random=2", title: "Sample"},
+                {id: 3, image_url: "https://picsum.photos/1000?random=3", title: "Sample"},
+                {id: 4, image_url: "https://picsum.photos/1000?random=4", title: "Sample"},
+                {id: 5, image_url: "https://picsum.photos/1000?random=5", title: "Sample"},
+                {id: 6, image_url: "https://picsum.photos/1000?random=6", title: "Sample"},
+                {id: 7, image_url: "https://picsum.photos/1000?random=7", title: "Sample"},
+                {id: 8, image_url: "https://picsum.photos/1000?random=8", title: "Sample"},
+            ],
+            btnShowMore: true,
+            postFocus: "",
+        }
+    }, methods: {
+        toggleShowMoreFeed() {
+            if (this.btnShowMore == true) {
+                this.postCount = 8;
+                this.btnShowMore = false;
+                $(".feed-button").text("Show less");
+            } else {
+                this.postCount = 3;
+                this.btnShowMore = true;
+                $(".feed-button").text("Show more");
+            }
+        },
+        async getPosts() {
+            return this.posts.slice(0, this.postCount);
+        },
+        fullscreenPost(postId) {
+            let post = this.posts.find(post => post.id == postId);
+            postFocus.value = post.image_url;
+            $("body").addClass("no-scroll");
+            $(".fullscreen-post").addClass("active");
+        },
+        leaveFullscreenPost() {
+            this.postFocus = "";
+            $("body").removeClass("no-scroll");
+            $(".fullscreen-post").removeClass("active");
+        },
     }
-}
-
-const getPosts = () => {
-    return postList.value.slice(0, postCount.value);
-}
-
-const fullscreenPost = (postId) => {
-    let post = postList.value.find(post => post.id == postId);
-    postFocus.value = post.image_url;
-    $("body").addClass("no-scroll");
-    $(".fullscreen-post").addClass("active");
-}
-
-const leaveFullscreenPost = () => {
-    postFocus.value = "";
-    $("body").removeClass("no-scroll");
-    $(".fullscreen-post").removeClass("active");
 }
 
 
