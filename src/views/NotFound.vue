@@ -1,7 +1,7 @@
 <template>
     <div class="section">
         <div class="container game-container">
-            <iframe id="game" src="https://itch.io/embed-upload/6840692?color=000" allowfullscreen="" frameborder=""><a href="https://holy-tanuki.itch.io/elder-killer-space-shooter">Play Elder Killer [Pico-8] on itch.io</a></iframe>
+            <iframe id="game" src="https://itch.io/embed-upload/6840692?color=000" frameborder=""><a href="https://holy-tanuki.itch.io/elder-killer-space-shooter">Play Elder Killer [Pico-8] on itch.io</a></iframe>
         </div>
     </div>
 </template>
