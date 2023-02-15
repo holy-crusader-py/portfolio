@@ -56,11 +56,11 @@ a {
   position: absolute;
   height: 100%;
   top: 0; left: 0; right: 0;
-  opacity: 0.2;
+  opacity: 0.35;
   background-image: url("/texture.png");
   background-repeat: repeat;
-  background-size: 450px;
-  mix-blend-mode: screen;
+  background-size: 600px;
+  mix-blend-mode: overlay;
   user-select: none;
   pointer-events: none;
   z-index: 998;
