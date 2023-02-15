@@ -25,8 +25,9 @@ export default {
 
 </script>
 
-<template>
+<template v-cloak>
   <div id="texture"></div>
+  <div id="effect"></div>
 
   <Header></Header>
 
