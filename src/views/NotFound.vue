@@ -1,7 +1,9 @@
 <template>
     <div class="section">
         <div class="container game-container">
-            <iframe id="game" src="https://itch.io/embed-upload/6840692?color=000" frameborder=""><a href="https://holy-tanuki.itch.io/elder-killer-space-shooter">Play Elder Killer [Pico-8] on itch.io</a></iframe>
+            <iframe id="game" src="https://itch.io/embed-upload/7373593?color=333333" frameborder="0">
+                <a href="https://holy-tanuki.itch.io/mrhandy-the-game">Play Mr.handy The Game on itch.io</a>
+            </iframe>
         </div>
     </div>
 </template>
@@ -12,8 +14,8 @@
 }
 #game {
     border: 5px solid #000;
-    aspect-ratio: 640 / 660;
-    max-width: 640px; width: 100%;
+    aspect-ratio: 1152 / 668;
+    max-width: 1000px; width: 100%;
     height: auto;
 }
 </style>
