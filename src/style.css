@@ -63,7 +63,7 @@ a {
 
 .dark-texture {
   opacity: 0.35;
-  background-image: url("/dark-texture.png");
+  background-image: url("/textures/dark-texture.png");
   background-repeat: repeat;
   background-size: 100% auto;
   mix-blend-mode: multiply;
@@ -71,7 +71,7 @@ a {
 
 .light-texture {
   opacity: 0.35;
-  background-image: url("/light-texture.png");
+  background-image: url("/textures/light-texture.png");
   background-repeat: repeat;
   background-size: 100% auto;
   mix-blend-mode: overlay;
@@ -79,7 +79,7 @@ a {
 
 .halftone-texture {
   opacity: 0.35;
-  background-image: url("/texture.png");
+  background-image: url("/textures/texture.png");
   background-repeat: repeat;
   background-size: 600px;
   mix-blend-mode: overlay;
