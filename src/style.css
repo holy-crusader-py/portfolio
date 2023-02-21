@@ -52,18 +52,37 @@ a {
   position: relative;
 }
 
-#texture {
+.texture {
   position: absolute;
   height: 100%;
   top: 0; left: 0; right: 0;
+  z-index: 998;
+  user-select: none;
+  pointer-events: none;
+}
+
+.dark-texture {
+  opacity: 0.35;
+  background-image: url("/dark-texture.png");
+  background-repeat: repeat;
+  background-size: 100% auto;
+  mix-blend-mode: multiply;
+}
+
+.light-texture {
+  opacity: 0.35;
+  background-image: url("/light-texture.png");
+  background-repeat: repeat;
+  background-size: 100% auto;
+  mix-blend-mode: overlay;
+}
+
+.halftone-texture {
   opacity: 0.35;
   background-image: url("/texture.png");
   background-repeat: repeat;
   background-size: 600px;
   mix-blend-mode: overlay;
-  user-select: none;
-  pointer-events: none;
-  z-index: 998;
 }
 
 div#header {
@@ -123,3 +142,4 @@ a {
   text-decoration: none;
   color: var(--color-primary);
 }
+

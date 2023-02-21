@@ -26,7 +26,9 @@ export default {
 </script>
 
 <template v-cloak>
-  <div id="texture"></div>
+  <div class="dark-texture texture"></div>
+  <div class="light-texture texture"></div>
+  <div class="halftone-texture texture"></div>
 
   <Header></Header>
 
@@ -39,6 +41,3 @@ export default {
   <Footer></Footer>
 
 </template>
-
-<style scoped>
-</style>
