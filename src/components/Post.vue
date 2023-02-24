@@ -7,24 +7,26 @@ defineProps({
 
 <template>
   <div class="post">
-    <div class="post-hover cursor-pointer">
+    <!-- <div class="post-hover cursor-pointer">
       <div class="post-hover-title">{{ title }}</div>
-    </div>
+    </div> -->
     <img class="post-image" :src="image_url" />
   </div>
 </template>
 
 <style scoped>
   .post-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    height: 428px;
+    width: 100%;
+    object-fit: cover;
   }
   .post {
-      width: 350px; height: 350px;
-      border: solid 5px #000;
-      box-shadow: 8px 8px 0px 0px #000;
-      position: relative;
+    display: block;
+    flex-grow: 1;
+    height: 428px;
+    border: solid 5px #000;
+    box-shadow: 8px 8px 0px 0px #000;
+    overflow: hidden;
   }
 
   .post-hover {
@@ -49,7 +51,6 @@ defineProps({
   @media screen and (max-width: 850px) {
       .post {
           width: 100%;
-          height: 100%;
       }
     }
 </style>

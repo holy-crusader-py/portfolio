@@ -20,7 +20,7 @@ export default {
 
 <template>
     <div id="header">
-        <router-link @click="toggleMenu(show=false)" class="logo-link" to="/">
+        <router-link @click="toggleMenu(show=false)" class="logo-link cursor-pointer" to="/">
             <img class="logo" alt="Logo" src="icon.png"/>
         </router-link>
         <div @click="toggleMenu" class="burger-button cursor-pointer">
@@ -30,13 +30,13 @@ export default {
         </div>
         <div class="nav-bar">
             <router-link @click="toggleMenu(show=false)" to="/projects">
-            <div class="nav-bar-item cursor-pointer">Projects</div>
+              <div class="nav-bar-item cursor-pointer">Projects</div>
             </router-link>
             <router-link @click="toggleMenu(show=false)" to="/about">
-            <div class="nav-bar-item cursor-pointer">About</div>
+              <div class="nav-bar-item cursor-pointer">About</div>
             </router-link>
             <router-link @click="toggleMenu(show=false)" to="/contact">
-            <div class="nav-bar-item cursor-pointer">Contact</div>
+              <div class="nav-bar-item cursor-pointer">Contact</div>
             </router-link>
         </div>
     </div>

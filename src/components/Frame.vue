@@ -43,6 +43,7 @@ defineProps({
       font-weight: 500;
       color: #000;
       white-space: initial;
+      text-align: justify;
   }
   .frame-header {
       border-bottom: solid 5px #000;

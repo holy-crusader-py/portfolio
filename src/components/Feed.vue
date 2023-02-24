@@ -14,16 +14,17 @@ export default {
     },
     data() {
         return {
-            postCount: 3,
+            postCount: 5,
             posts: [
                 {id: 1, image_url: "https://picsum.photos/1000/600?random=1", title: "Sample"},
-                {id: 2, image_url: "https://picsum.photos/1000?random=2", title: "Sample"},
+                {id: 2, image_url: "https://picsum.photos/1000/2000?random=2", title: "Sample"},
                 {id: 3, image_url: "https://picsum.photos/1000?random=3", title: "Sample"},
                 {id: 4, image_url: "https://picsum.photos/1000?random=4", title: "Sample"},
-                {id: 5, image_url: "https://picsum.photos/1000?random=5", title: "Sample"},
+                {id: 5, image_url: "https://picsum.photos/300/1000?random=5", title: "Sample"},
                 {id: 6, image_url: "https://picsum.photos/1000?random=6", title: "Sample"},
-                {id: 7, image_url: "https://picsum.photos/1000?random=7", title: "Sample"},
-                {id: 8, image_url: "https://picsum.photos/1000?random=8", title: "Sample"},
+                {id: 7, image_url: "https://picsum.photos/1000/1500?random=7", title: "Sample"},
+                {id: 8, image_url: "https://picsum.photos/450/745?random=8", title: "Sample"},
+                {id: 9, image_url: "https://picsum.photos/1000?random=9", title: "Sample"},
             ],
             btnShowMore: true,
             postFocus: "",
@@ -31,11 +32,11 @@ export default {
     }, methods: {
         toggleShowMoreFeed() {
             if (this.btnShowMore == true) {
-                this.postCount = 8;
+                this.postCount = 9;
                 this.btnShowMore = false;
                 $(".feed-button").text("Show less");
             } else {
-                this.postCount = 3;
+                this.postCount = 5;
                 this.btnShowMore = true;
                 $(".feed-button").text("Show more");
             }
@@ -99,14 +100,13 @@ export default {
     .post-handler {
         width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
         margin: 100px 0;
     }
     .post-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 80px;
+        display: flex;
+        gap: 20px;
+        flex-flow: row wrap;
     }
 
     .toggle-feed {
