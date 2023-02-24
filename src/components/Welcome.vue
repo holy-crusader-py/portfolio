@@ -3,7 +3,8 @@
     <div class="container">
       <div class="grid-hero">
         <div class="left">
-          <h1 class="title">Hey there. <br />I'm Cods.</h1>
+          <h1 class="title">Hey there.</h1>
+          <h1 class="title-l2">I'm Atomic Dreamz.</h1>
           <h3 class="subtitle">I'm a french art student.</h3>
         </div>
         <div class="right">
@@ -15,6 +16,11 @@
 </template>
 
 <style scoped>
+.title-l2 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 0.9;
+}
 .left {
   margin: auto 0;
 }
@@ -31,7 +37,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 .subtitle {
   font-size: 2rem;
