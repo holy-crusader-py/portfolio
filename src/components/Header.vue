@@ -24,7 +24,7 @@ export default {
             <img
             class="logo"
             alt="Vue logo"
-            src="https://vuejs.org/images/logo.png"
+            src="icon.png"
             />
         </router-link>
         <div @click="toggleMenu" class="burger-button cursor-pointer">
@@ -54,7 +54,8 @@ export default {
   height: 100%; width: 75px;
 }
 .logo {
-  width: 48px; height: 48px;
+  /* width: 48px; height: 48px; */
+  width: 65px; height: 65px;
   will-change: filter;
   transition: filter 300ms;
 }
