@@ -14,16 +14,35 @@ defineProps({
       <h2 class="frame-title">{{ title }}</h2>
     </div>
     <div class="frame-content">
-      <button class="frame-button">View Project</button>
       <img class="frame-image" :src="image_url" />
+      <div class="description-container">
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit placeat perferendis temporibus veritatis fugit magni, corporis est unde. Odit eaque ut amet ipsam dolorum asperiores, deleniti atque nemo tempora.
+        </p>
+      </div>
+      <button class="frame-button">View Project</button>
     </div>
   </div>
 </template>
 
 <style scoped>
   .frame-image {
-      width: 100%; height: 100%;
+      width: 100%; height: 55%;
       object-fit: cover;
+  }
+
+  .description-container {
+      border-top: solid 5px #000;
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 45%;
+      padding: 10px;
+  }
+  .description {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #000;
+      white-space: initial;
   }
   .frame-header {
       border-bottom: solid 5px #000;
@@ -40,7 +59,7 @@ defineProps({
   }
   .frame-button {
       position: absolute;
-      bottom: 10px; right: 10px;
+      bottom: 10px; left: 10px;
       padding: 0 10px;
       height: 50px;
       border: solid 5px #000;

@@ -10,7 +10,7 @@ library.add(faInstagram)
 <template>
     <div id="footer">
         <div class="footer-container">
-            <p>©2023 Cods</p>
+            <p>©2023 Atomic Dreamz</p>
             <div class="socials">
                 <a href="https://www.instagram.com/the_holy_crusader/" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
             </div>
@@ -38,6 +38,10 @@ library.add(faInstagram)
         width: 100%;
         font-size: 1.1rem;
         font-weight: 00;
+    }
+
+    .footer-container p {
+        margin: auto 0;
     }
     .socials {
         display: flex;

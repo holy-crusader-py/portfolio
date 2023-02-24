@@ -44,7 +44,7 @@ export default {
         </div>
         <div @wheel="handleScroll" class="container project-container">
             <div class="projects-scroller">
-                <Frame v-for="i in 4" :image_url="'https://picsum.photos/740/440?random=' + i" title="Sample" />
+                <Frame v-for="i in 4" :image_url="'https://picsum.photos/740/220?random=' + i" title="Sample" />
             </div>
         </div>
     </div>

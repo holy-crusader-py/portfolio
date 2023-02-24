@@ -21,11 +21,7 @@ export default {
 <template>
     <div id="header">
         <router-link @click="toggleMenu(show=false)" class="logo-link" to="/">
-            <img
-            class="logo"
-            alt="Vue logo"
-            src="icon.png"
-            />
+            <img class="logo" alt="Logo" src="icon.png"/>
         </router-link>
         <div @click="toggleMenu" class="burger-button cursor-pointer">
             <div class="burger-line"></div>
