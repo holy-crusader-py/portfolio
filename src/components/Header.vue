@@ -1,5 +1,4 @@
 <script>
-
 export default {
     methods: {
         toggleMenu(show = null) {
@@ -21,7 +20,7 @@ export default {
 <template>
     <div id="header">
         <router-link @click="toggleMenu(show=false)" class="logo-link cursor-pointer" to="/">
-            <img class="logo" alt="Logo" src="icon.png"/>
+            <img class="logo" alt="Logo" src="/icon.png"/>
         </router-link>
         <div @click="toggleMenu" class="burger-button cursor-pointer">
             <div class="burger-line"></div>
